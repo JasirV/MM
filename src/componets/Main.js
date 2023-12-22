@@ -3,10 +3,9 @@ import Navigation from './Navigation'
 import camer from'./camera.json'
 import Lottie from 'lottie-react'
 import { useEffect } from 'react'
-import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit'
-import image from'./Wedding-Shoppe-Inc-2024-Wedding-Colors-Popular_1_1024x1024-removebg-preview.png'
-import image2 from './Wedding-Trends-You-Are-About-to-Spot-in-2023-2_11zon-removebg-preview.png'
-// import videoclip from './WEDDING HIGHLIGHTS.mp4'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 const Main = () => {
   const [state,setState]=useState(true)
   useEffect(()=>{
@@ -14,39 +13,47 @@ const Main = () => {
       setState(false)
     },4000)
   })
-  console.log(state);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+  
   return (
-    <div style={{ background: 'linear-gradient(to right, #ffbe98, #bba99e)', boxShadow: 'none',  textAlign: "center", height: "100vh"}}>
+    <div style={{ background: 'linear-gradient(to right, #ffbe98, #bba99e)', boxShadow: 'none', textAlign: "center"}}>
       <div>
         <Navigation />
       </div>
-      {state ?(
-      <div style={{display:"flex", justifyContent:"center", alignItems:"center" }}>
-        
-      <div style={{ backgroundColor: "red", width:"400px", height:"400px"}}>
-        <Lottie animationData={camer} />
-      </div>
+      {state ? (
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 
-      <div style={{ background: 'linear-gradient(to right, #ffbe98, #bba99e)', boxShadow: 'none', height: "80vh" }}>
+          <div style={{ backgroundColor: "red", width: "400px", height: "400px" }}>
+            <Lottie animationData={camer} />
+          </div>
 
-      </div>
-      </div>
-      ):(
-        <MDBCarousel showControls showIndicators>
-      <MDBCarouselItem itemId={1}>
-        <img src={image} className='d-block w-100' alt='...' />
-      </MDBCarouselItem>
-      <MDBCarouselItem itemId={3}>
-        <img src={image} className='d-block w-100' alt='...' />
-      </MDBCarouselItem>
-      <MDBCarouselItem itemId={2}>
-        {/* <video controls className='d-block w-100'>
-        <source src={videoclip} type='video/mp4' />
-        Your browser does not support the video tag.
-      </video> */}
-      </MDBCarouselItem>
-    </MDBCarousel>
+          <div style={{ background: 'linear-gradient(to right, #ffbe98, #bba99e)', boxShadow: 'none', height: "80vh" }}>
+
+          </div>
+        </div>
+      ) : (
+        <div style={{ maxWidth: '1450px', margin: '0 auto' }}>
+      <Slider {...settings} style={{alignItems:"center"}}>
+        <div>
+          <img style={{margin:"auto"}} src="https://icon2.cleanpng.com/20180504/ifw/kisspng-porsche-930-2017-porsche-911-porsche-911-carrera-4-5aec96bd20ea63.1746543515254545251348.jpg" alt="Image 1" />
+        </div>
+        <div>
+          <img style={{margin:"auto"}}  src="https://w7.pngwing.com/pngs/297/376/png-transparent-2018-porsche-911-porsche-911-gt3-car-porsche-boxster-cayman-porsche-compact-car-convertible-performance-car.png" alt="Image 2" />
+        </div>
+        <div>
+          <img style={{margin:"auto"}}  src="https://e7.pngegg.com/pngimages/313/777/png-clipart-porsche-911-gt3-r-991-sports-car-porsche-compact-car-convertible.png" alt="Image 3" />
+        </div>
+        {/* Add more slides as needed */}
+      </Slider>
+    </div>
       )}
+      <h1 className='m-5'>About</h1>
     </div>
   )
 }

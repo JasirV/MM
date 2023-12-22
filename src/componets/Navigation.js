@@ -1,25 +1,24 @@
-import React from 'react';
-import {
-  MDBContainer,
-  MDBNavbar,
-  MDBNavbarBrand
-} from 'mdb-react-ui-kit';
+import { CiSearch } from "react-icons/ci";
+import { FaRegUser } from "react-icons/fa";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function App() {
+const Navigation = () => {
   return (
-    <>
-      <MDBNavbar style={{ background: 'linear-gradient(to right, #ffbe98, #bba99e)', boxShadow: 'none' }}>
-        <MDBContainer>
-          <MDBNavbarBrand href='#'>
-            <img
-              src='https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.webp'
-              height='30'
-              alt=''
-              loading='lazy'
-            />
-          </MDBNavbarBrand>
-        </MDBContainer>
-      </MDBNavbar>
-    </>
-  );
+    <div> 
+       <nav style={{display:"flex",justifyContent:"space-between"}}>
+    <div className="logo mx-5">Your Logo</div>
+    <div className="nav-links mt-3">
+      <Link className="m-2" to="/">Home</Link>
+      <Link className="m-2"  to="/contact">Contact</Link>
+      <Link className="m-2" to="/services">Services</Link>
+    </div>
+    <div className="mx-3">
+    <FaRegUser className="m-3 mt-3" />
+    </div>
+  </nav>
+</div>
+  )
 }
+
+export default Navigation
