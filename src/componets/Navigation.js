@@ -9,9 +9,9 @@ const Navigation = () => {
        <nav style={{display:"flex",justifyContent:"space-between"}}>
     <div className="logo mx-5">Your Logo</div>
     <div className="nav-links mt-3">
-      <Link className="m-2" to="/">Home</Link>
-      <Link className="m-2"  to="/contact">Contact</Link>
-      <Link className="m-2" to="/services">Services</Link>
+      <Link style={{color:"black", fontWeight:"600"}} className="m-2" to="/">Home</Link>
+      <Link  style={{color:"black" , fontWeight:"600"}} className="m-2"  to="/contact">Contact</Link>
+      <Link  style={{color:"black" , fontWeight:"600"}} className="m-2" to="/services">Services</Link>
     </div>
     <div className="mx-3">
     <FaRegUser className="m-3 mt-3" />

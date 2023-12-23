@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Contact from './Contact'
 const Main = () => {
   const [state,setState]=useState(true)
   useEffect(()=>{
@@ -29,7 +30,7 @@ const Main = () => {
       {state ? (
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 
-          <div style={{ backgroundColor: "red", width: "400px", height: "400px" }}>
+          <div style={{width: "400px", height: "400px" }}>
             <Lottie animationData={camer} />
           </div>
 
@@ -41,7 +42,7 @@ const Main = () => {
         <div style={{ maxWidth: '1450px', margin: '0 auto' }}>
       <Slider {...settings} style={{alignItems:"center"}}>
         <div>
-          <img style={{margin:"auto"}} src="https://icon2.cleanpng.com/20180504/ifw/kisspng-porsche-930-2017-porsche-911-porsche-911-carrera-4-5aec96bd20ea63.1746543515254545251348.jpg" alt="Image 1" />
+          <img style={{margin:"auto"}} src="https://files.porsche.com/filestore/image/multimedia/none/socialsharing-fallback/normal/9764fd53-0936-11e5-bccb-001a64c55f5c/porsche-normal.jpg" alt="Image 1" />
         </div>
         <div>
           <img style={{margin:"auto"}}  src="https://w7.pngwing.com/pngs/297/376/png-transparent-2018-porsche-911-porsche-911-gt3-car-porsche-boxster-cayman-porsche-compact-car-convertible-performance-car.png" alt="Image 2" />
@@ -53,7 +54,7 @@ const Main = () => {
       </Slider>
     </div>
       )}
-      <h1 className='m-5'>About</h1>
+      <Contact/>
     </div>
   )
 }

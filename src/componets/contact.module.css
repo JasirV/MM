@@ -5,7 +5,19 @@ label{
 }
 button{
     height: 2.6rem;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 11rem;
     font-weight: 500;
+    color: white;
+    background-color: black;
 }
+button:hover{
+    color: black;
+    background-color: white;
+    border: none;
+}
+input {
+    color: white;
+    outline: none;
+    border: none;
+  }
