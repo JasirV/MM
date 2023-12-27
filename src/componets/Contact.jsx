@@ -10,7 +10,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { Footer } from './Footer';
 const Contact = () => {
   return (
-    <div>
+    <div className='mt-3'>
       <div style={{ margin: "auto" }} className='mt-5 mb-5'>
         <h1 style={{ color: "black", fontWeight: "700" }}>Contact Us</h1>
         <h5>Any question or remarks? Just write us a message!</h5>

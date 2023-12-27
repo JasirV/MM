@@ -7,6 +7,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Contact from './Contact'
+import ImageGallery from './ImageGallery'
 const Main = () => {
   const [state,setState]=useState(true)
   useEffect(()=>{
@@ -24,7 +25,7 @@ const Main = () => {
   
   return (
     <div style={{ background: 'linear-gradient(to right, #ffbe98, #bba99e)', boxShadow: 'none', textAlign: "center"}}>
-      <div>
+      <div className='mb-3'>
         <Navigation />
       </div>
       {state ? (
@@ -54,6 +55,7 @@ const Main = () => {
       </Slider>
     </div>
       )}
+      <ImageGallery/>
       <Contact/>
     </div>
   )
