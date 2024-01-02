@@ -1,8 +1,8 @@
 import React from "react";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
-import { BiLogoGmail } from "react-icons/bi";
-import { FaXTwitter } from "react-icons/fa6";
+import { BiLogoGmail } from "react-icons/bi"; 
+import { FaWhatsapp } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -14,13 +14,10 @@ export const Footer = () => {
             <div className="row text-center text-md-left">
               <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h5 className="text-uppercase mb-4 font-weight-bold ">
-                  Company
+                  MM WEDDINGS
                 </h5>
                 <p>
-                  Royal Canin is a leading pet nutrition company dedicated to
-                  providing high-quality pet food products. We focus on offering
-                  tailored nutritional solutions for dogs and cats based on
-                  their specific needs.
+
                 </p>
               </div>
               <div className="col-md-2 col-lg-2col-xl-2 mx-auto mt-3">
@@ -28,13 +25,13 @@ export const Footer = () => {
                   Products
                 </h5>
                 <p>
-                  <span style={{ textDecoration: "none" }}>PetFood</span>
+                  <span style={{ textDecoration: "none" }}>PHOTOGRAPHY</span>
                 </p>
                 <p>
-                  <span style={{ textDecoration: "none" }}>Dog Food</span>
+                  <span style={{ textDecoration: "none" }}>CINEMATOGRAPHY</span>
                 </p>
                 <p>
-                  <span style={{ textDecoration: "none" }}>Cat Food</span>
+                  <span style={{ textDecoration: "none" }}>ALBUM DESING & PRINTING</span>
                 </p>
               </div>
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -64,20 +61,20 @@ export const Footer = () => {
                   <AiFillInstagram />
                 </p>
                 <p>
+                  <FaWhatsapp />
+                </p>
+                <p>
                   <BsFacebook />
                 </p>
                 <p>
                   <BiLogoGmail />
-                </p>
-                <p>
-                  <FaXTwitter />
                 </p>
               </div>
             </div>
             <hr className="mb-4"></hr>
             <div className="row align-items-center">
               <div>
-                <p>Copyright @2023 All rights reserved by</p>
+                <p>Copyright @2023 All rights reserved by mm weddings</p>
               </div>
             </div>
           </div>

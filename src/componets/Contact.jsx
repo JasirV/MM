@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useEffect} from 'react'
 import './contact.module.css'
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
@@ -8,14 +8,20 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { Footer } from './Footer';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 const Contact = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   return (
-    <div className='mt-3'>
+    <div className='mt-39'>
       <div style={{ margin: "auto" }} className='mt-5 mb-5'>
         <h1 style={{ color: "black", fontWeight: "700" }}>Contact Us</h1>
         <h5>Any question or remarks? Just write us a message!</h5>
       </div>
-      <div className='mt-3' style={{ width: "1150px", height: "600px", padding: "5px", borderRadius: "20px",boxShadow:"0 0 15px #333", background: "rgba(0,0,0,0.1)", backdropFilter: "blur(10px)", margin: "auto", display: "flex" }}>
+      <div data-aos="zoom-in" className='mt-3' style={{ width: "1150px", height: "600px", padding: "5px", borderRadius: "20px",boxShadow:"0 0 15px #333", background: "rgba(0,0,0,0.1)", backdropFilter: "blur(10px)", margin: "auto", display: "flex" }}>
         <div style={{ width: "450px", height: "570px", backgroundColor: "black", borderRadius: "20px" ,display:"flex" ,flexDirection:"column",justifyContent:"space-around", color:"white"}} className='mt-2 mx-2 p-2'>
           <div>
             <h3>Contact Information</h3>

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import photo from './SFT063yjkl93.JPG'
+import React, { useEffect, useState } from 'react';
+import photo from './photo.jpg'
 import './ImageGallery.module.css'
-import { MDBCarouselCaption } from 'mdb-react-ui-kit';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const ImageGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -14,37 +15,40 @@ const ImageGallery = () => {
     setSelectedImage(index === selectedImage ? null : index);
     images[0].id = 10
   };
+  useEffect(() => {
+    Aos.init();
+  }, [])
 
 
   return (
-    <div className='mb-5'>
+    <div id='services' className='mb-5'>
       <h1 className='mt-5 mb-4'>Products</h1>
-    <div style={{display:"flex", justifyContent:"center", justifyItems:"center"}}>
-      {images.map((image, index) => (
-        <div>
-          <img
-            key={index}
-            src={image.imag}
-            alt={`Image ${index + 1}`}
-            style={{
-              cursor: 'pointer',
-              width: index === selectedImage || image.id == 1 ? '700px' : '100px',
-              height: index === selectedImage || image.id == 1 ? 'auto' : "560px",
-              filter: index === selectedImage || image.id == 1 ? 'blur(0px)' : 'blur(2px)',
-              margin: '5px',
-            }}
+      <div style={{ display: "flex", justifyContent: "center", justifyItems: "center" }} >
+        {images.map((image, index) => (
+          <div data-aos="fade-rigth">
+            <img data-aos="fade-left"
+              key={index}
+              src={image.imag}
+              alt={`Image ${index + 1}`}
+              style={{
+                cursor: 'pointer',
+                width: index == selectedImage || image.id == 1 ? '700px' : '100px',
+                height: index == selectedImage || image.id == 1 ? 'auto' : "560px",
+                filter: index == selectedImage || image.id == 1 ? 'blur(0px)' : 'blur(2px)',
+                margin: '5px',
+              }}
 
-            onClick={() => handleImageClick(index)}
-          />
-          {index === selectedImage || image.id === 1 ? (
+              onClick={() => handleImageClick(index)}
+            />
+            {index === selectedImage || image.id === 1 ? (
               <div >
                 <h6>{image.title}</h6>
                 <p>{image.description}</p>
               </div>
             ) : null}
-        </div>
-      ))}
-    </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

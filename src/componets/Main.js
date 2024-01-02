@@ -1,20 +1,27 @@
 import React, { useState } from 'react'
 import Navigation from './Navigation'
-import camer from'./camera.json'
-import Lottie from 'lottie-react'
 import { useEffect } from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Contact from './Contact'
 import ImageGallery from './ImageGallery'
+
 const Main = () => {
   const [state,setState]=useState(true)
+  const [newstate,setnewstate]=useState(true)
   useEffect(()=>{
     setTimeout(()=>{
       setState(false)
     },4000)
   })
+  useEffect(()=>{
+    const intervalId = setInterval(() => {
+      setnewstate((prevIsOn) => !prevIsOn); 
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
   const settings = {
     dots: true,
     infinite: true,
@@ -23,16 +30,18 @@ const Main = () => {
     slidesToScroll: 1,
   };
   
+  
   return (
     <div style={{ background: 'linear-gradient(to right, #ffbe98, #bba99e)', boxShadow: 'none', textAlign: "center"}}>
-      <div className='mb-3'>
+      <div className='mb-3' >
         <Navigation />
       </div>
       {state ? (
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <div className='mt-5' style={{ display: "flex", justifyContent: "center", alignItems: "center" ,alignContent:"center"}}>
 
-          <div style={{width: "400px", height: "400px" }}>
-            <Lottie animationData={camer} />
+          <div className='mt-5' style={{width: "800px", height: "400px",textAlign:"center",display:"flex", justifyContent:"center",alignItems:"center" }}>
+            {newstate?<h1 style={{fontSize: "100px",fontWeight: "600",color: "rgba(0,0,0,0.3)"}} >MM WEDDINGS </h1>:<h1 style={{fontSize: "100px",fontWeight: "600",color: "rgba(0,0,0,0.3)"}}>WELLCOME</h1>}
+
           </div>
 
           <div style={{ background: 'linear-gradient(to right, #ffbe98, #bba99e)', boxShadow: 'none', height: "80vh" }}>
