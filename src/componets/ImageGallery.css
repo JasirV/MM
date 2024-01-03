@@ -1,0 +1,21 @@
+img{
+    border-radius: 10px;
+}
+.head{
+    color: red;
+}
+@media (max-width: 768px) {
+    .image-container {
+      flex-direction: column; /* Stack images vertically on smaller screens */
+      align-items: center; /* Center images horizontally on smaller screens */
+    }
+  
+    .image-wrapper {
+      width: 100%; 
+    }
+    .img-photo{
+      width: 90% !important;
+      height: auto;
+      margin: auto !important;
+    }
+  }

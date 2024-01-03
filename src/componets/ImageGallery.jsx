@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import photo from './photo.jpg'
-import './ImageGallery.module.css'
+import './ImageGallery.css'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
@@ -21,19 +21,20 @@ const ImageGallery = () => {
 
 
   return (
-    <div id='services' className='mb-5'>
+    <div id='services' className='mb-5 '>
       <h1 className='mt-5 mb-4'>Products</h1>
-      <div style={{ display: "flex", justifyContent: "center", justifyItems: "center" }} >
+      <div className='image-container' style={{ display: "flex", justifyContent: "center", justifyItems: "center" }} >
         {images.map((image, index) => (
           <div data-aos="fade-rigth">
-            <img data-aos="fade-left"
-              key={index}
+            <img className='img-photo' data-aos="fade-left"
+              key={index||image.id}
               src={image.imag}
               alt={`Image ${index + 1}`}
               style={{
                 cursor: 'pointer',
-                width: index == selectedImage || image.id == 1 ? '700px' : '100px',
-                height: index == selectedImage || image.id == 1 ? 'auto' : "560px",
+                width: index == selectedImage || image.id == 1 ? '500px' : '200px',
+                height: '500px',
+                maxHeight:'600px',
                 filter: index == selectedImage || image.id == 1 ? 'blur(0px)' : 'blur(2px)',
                 margin: '5px',
               }}
