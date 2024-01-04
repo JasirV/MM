@@ -22,6 +22,7 @@ const ImageGallery = () => {
 
   return (
     <div id='services' className='mb-5 '>
+      <h1>Hai All</h1>
       <h1 className='mt-5 mb-4'>Products</h1>
       <div className='image-container' style={{ display: "flex", justifyContent: "center", justifyItems: "center" }} >
         {images.map((image, index) => (
