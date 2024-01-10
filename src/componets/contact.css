@@ -28,3 +28,9 @@ input {
   }
   
 }
+@media (max-width: 600px) {
+    div {
+      font-size: 14px !important;
+    }
+
+  }

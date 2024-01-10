@@ -32,7 +32,7 @@ const Main = () => {
   
   
   return (
-    <div style={{ background: 'linear-gradient(to right, #ffbe98, #bba99e)', boxShadow: 'none', textAlign: "center"}}>
+    <div style={{ background: 'linear-gradient(to right, #ffbe98, #bba99e)',width:'100%', boxShadow: 'none', textAlign: "center"}}>
   <div className='mb-3'>
     <Navigation />
   </div>
