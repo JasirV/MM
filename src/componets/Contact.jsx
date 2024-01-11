@@ -17,9 +17,6 @@ const Contact = () => {
   },[])
   return (
     <div className='mt-39'>
-      <style>
-      padding: 10px !important;
-      </style>
       <div style={{ margin: "auto" }} className='mt-5 mb-5'>
         <h1 style={{ color: "black", fontWeight: "700" }}>Contact Us</h1>
         <h5>Any question or remarks? Just write us a message!</h5>
@@ -81,6 +78,9 @@ const Contact = () => {
     <button className="button p-2">Send Message</button>
   </div>
 </div>
+
+
+
       </div>
       <Footer/>
     </div>
