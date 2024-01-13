@@ -40,7 +40,7 @@ const Main = () => {
     <div className='mt-5' style={{ display: "flex", justifyContent: "center", alignItems: "center" , alignContent:"center"}}>
 
       <div className='mt-5' style={{ width: "800px", height: "400px", textAlign:"center", display:"flex", justifyContent:"center",alignItems:"center" }}>
-        {newstate ? <h1 style={{ fontSize: "100px", fontWeight: "600", color: "rgba(0,0,0,0.3)" }} >MM WEDDINGS </h1> : <h1 style={{ fontSize: "100px", fontWeight: "600", color: "rgba(0,0,0,0.3)"}}>WELCOME</h1>}
+        {newstate ? <h1 style={{ fontSize: "6vw", fontWeight: "600", color: "rgba(0,0,0,0.3)" }} >MM WEDDINGS </h1> : <h1 style={{ fontSize: "6vw", fontWeight: "600", color: "rgba(0,0,0,0.3)"}}>WELCOME</h1>}
 
       </div>
 

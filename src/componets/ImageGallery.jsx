@@ -32,7 +32,7 @@ const ImageGallery = () => {
               alt={`Image ${index + 1}`}
               style={{
                 cursor: 'pointer',
-                width: index == selectedImage || image.id == 1 ? '500px' : '200px',
+                width: index == selectedImage || image.id == 1 ? '500px' : '100px',
                 height: '500px',
                 maxHeight:'600px',
                 filter: index == selectedImage || image.id == 1 ? 'blur(0px)' : 'blur(2px)',
